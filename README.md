@@ -27,14 +27,14 @@
 3. **Flutter Prototype**  
    ![Flutter App](samples/flutter-prototype.png)
 
-> Browse the code for each demo in the [samples/](./samples/) folder.
+> Browse the code for each demo in the [code-samples/) folder.
 
 ---
 
 #### 📬 Contact
 - **Email:** juniord3mon@outlook.com  
 - **GitHub:** [github.com/jaymesjnr/portfolio](https://github.com/jaymesjnr/portfolio)  
-- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/holyd3mon)
+- **LinkedIn:** [linkedin.com/in/jaymesjnr](https://linkedin.com/in/jaymesjnr)
 
 ---
 
