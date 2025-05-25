@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "512580887099",
+    "project_id": "trackr-4e055",
+    "storage_bucket": "trackr-4e055.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512580887099:android:5b65a0041a795ffd1df21e",
+        "android_client_info": {
+          "package_name": "com.example.jnr_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFB_oq408TJFDUk3UOIURyOCxtZ3MZhyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

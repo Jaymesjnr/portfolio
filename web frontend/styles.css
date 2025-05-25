@@ -1,0 +1,436 @@
+  @font-face {font-family: "aldrich";
+    src: url("/fonts/Aldrich-Regular.ttf") format("truetype");}
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  font-family: aldrich;
+}
+
+body{
+    background-color: black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: black;
+    z-index: 100;
+  }
+  .navbar .logo a img{
+    width: 50px;
+  }
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .navbar .nav-links li a{
+    color: #f5f5f5;
+    text-decoration: none;
+  }
+  .navbar .join-button {
+    background-color: transparent;
+    color: #f5f5f5;
+    border: solid;
+    padding: 10px ;
+    text-decoration: none;
+    border-radius: 15px;
+  }
+  .navbar .join-button:hover{
+    background-color: #f5f5f5;
+    color: black;
+    transition: all ease-in-out 0.5s;
+  }
+  
+ /* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black; /* Background Color */
+    color: #f5f5f5; /* Text Color */
+    text-align: center;
+    position: relative; /* To position the Lottie animation */
+  }
+  
+  /* Hero Content Styling */
+  .hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #f5f5f5; /* Text color */
+  }
+  .hero-content p {
+    font-size: 20px;
+    color: #f5f5f5;
+  }
+  /* Store buttons*/
+  .button-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 50px;
+}
+.store-button {
+    display: inline-block;
+   
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.store-button img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Fade-In Animation */
+.hero-content {
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+   
+/* Social Proof Section */
+.social-proof {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  border-radius: 20px;
+}
+
+/* Tabs */
+.tabs {
+  margin-bottom: 40px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.tab-btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+.tab-btn.active {
+  background-color: black;
+  color: white;
+}
+
+.tab-content {
+  display: none;
+  font-size: 18px;
+  color: #333;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+.tab-content:not(.hidden) {
+  display: block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Ratings */
+.ratings h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.rating-stars {
+  font-size: 20px;
+  color: #ffd700;
+}
+
+.rating-stars span {
+  margin-right: 5px;
+}
+
+/* Awards */
+.award-logos img {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+/* Footer Section Styling */
+.footer-section {
+  background-color: black;
+  color: #f5f5f5;
+  padding: 60px 20px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.links-column h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.links-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links-column li {
+  margin-bottom: 10px;
+}
+
+.links-column a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links-column a:hover {
+  color: #ffe6cc;
+}
+
+.footer-social h4 {
+  margin-bottom: 15px;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #f5f5f5;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffe6cc;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+
+  /* Responsive Media Queries */
+
+/* Mobile Devices (Portrait) */
+@media (max-width: 767px) {
+  #splash-animation {
+    width: 150px;
+    height: 150px;
+  }
+
+  #splash-screen h1 {
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+
+  .how-it-works {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    margin-bottom: 40px;
+  }
+
+  .core-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    margin-bottom: 30px;
+  }
+
+  .cta h3 {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+.cta-section {
+  flex-direction: column;
+  text-align: center;
+}
+
+.cta-content, .cta-animation {
+  max-width: 100%;
+}
+
+.cta-button {
+  width: 100%;
+}
+
+.footer-top {
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-links {
+  justify-content: center;
+}
+
+.links-column {
+  margin-bottom: 20px;
+}
+
+.newsletter-form {
+  flex-direction: column;
+}
+
+.newsletter-form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.newsletter-form button {
+  width: 100%;
+}
+}
+
+/* Tablets (Portrait and Landscape) */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+
+  .how-it-works {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .step {
+    margin-bottom: 20px;
+  }
+
+  .core-features {
+    flex-direction: row;
+  }
+
+  .feature {
+    margin-bottom: 20px;
+  }
+
+  .cta h3 {
+    font-size: 22px;
+  }
+
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 18px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 20px;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .how-it-works {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .core-features {
+    flex-direction: row;
+  }
+
+  .feature {
+    margin-bottom: 20px;
+  }
+
+  .cta h3 {
+    font-size: 24px;
+  }
+
+  .cta-button {
+    padding: 15px 30px;
+    font-size: 18px;
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+}
+.contact-form, .contact-info {
+    width: 100%;
+}
+}
