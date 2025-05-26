@@ -2,7 +2,7 @@
 
 Minimal habit tracker app built with Flutter and Firebase.
 
-![screenshot](screenshots/main.png)
+![screenshot](screenshots/flutter-home.png)
 
 ## ✨ Features
 
@@ -22,7 +22,7 @@ Minimal habit tracker app built with Flutter and Firebase.
 
 | Login Screen | Home Screen |
 |--------------|-------------|
-| ![](screenshots/login.png) | ![](screenshots/home.png) |
+| ![](screenshots/flutter-login.png) | ![](screenshots/flutter-home.png) |
 
 ## 📦 Getting Started
 
