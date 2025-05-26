@@ -1,4 +1,4 @@
-# James Jnr Ominyi • Front‑End, Back-End & Flutter Developer
+# James Jnr • Front‑End, Back-End & Flutter Developer
 
 #### 🔹 Services & Rates
 - **Static Landing Pages** (HTML · CSS · JavaScript)  
@@ -20,14 +20,12 @@
 ---
 
 #### 📂 Samples & Demos
-1. **Landing Page Sample**  
-   ![Landing Page](samples/landing-page.png)  
-2. **Interactive Modal Widget**  
-   ![Modal Widget](samples/modal-widget.png)  
+1. **Web Frontend**  
+   ![Web-frontend](samples/landing-page.png) 
 3. **Flutter Prototype**  
-   ![Flutter App](samples/flutter-prototype.png)
+   ![Flutter-App](samples/flutter-prototype.png)
 
-> Browse the code for each demo in the [code-samples/) folder.
+> Browse the code for each demo in their respective folders folder.
 
 ---
 
