@@ -1,7 +1,7 @@
 # James Jnr • Front‑End, Back-End & Flutter Developer
 
 #### 🔹 Services & Rates
-- **Static Landing Pages** (HTML · CSS · JavaScript)  
+- **Landing Pages & Responsibe Websites** (HTML · CSS · JavaScript)  
   – Responsive, SEO‑friendly, basic animations/interactivity  
   – **\$150–\$200** per page
 
@@ -9,11 +9,11 @@
   – Diagnose/fix layout bugs, responsive issues, add small JS features  
   – **\$30–\$50** per hour
 
-- **Flutter Mobile Prototypes** (Dart · Flutter)  
-  – Up to 3 screens, navigation, basic state management  
+- **Flutter Mobile App/Prototypes** (Dart · Flutter)  
+  – 10+ screens, navigation, basic state management  
   – **\$300** per project
 
-- **Firebase Backend Integration** (Firebase · Firestore · Auth)  
+- **Backend Integration** (Firebase/Supabase · Firestore · Auth)  
   – Real-time databases, authentication, serverless functions  
   – **$200–$300** per integration
 
@@ -25,7 +25,7 @@
 3. **Flutter Prototype**  
    ![Flutter-App](samples/flutter-prototype.png)
 
-> Browse the code for each demo in their respective folders folder.
+> Browse the code for each demo in their respective folders.
 
 ---
 
@@ -37,4 +37,4 @@
 ---
 
 #### 🚀 Let’s Build Something
-Whether you need a quick bug fix, a polished landing page, or a working mobile prototype, I deliver clean, maintainable code—and fast. Reach out, and let’s get it done.
+Whether you need a quick bug fix, a functional lwebsite, or a working mobile app/prototype, I deliver clean, maintainable code—and fast. Reach out, and let’s get it done.
