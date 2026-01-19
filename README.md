@@ -45,7 +45,7 @@ Showcasing my ability to craft professional digital products — from responsive
 
 - **Email:** [juniord3mon@outlook.com](mailto:juniord3mon@outlook.com)  
 - **GitHub:** [github.com/jaymesjnr](https://github.com/jaymesjnr)  
-- **Portfolio Website:** [yourportfolio.com](https://yourportfolio.com)
+- **Portfolio Website:** [jaymesjnr.vercel.com](https://jaymesjnr.vercel.com)
 
 ---
 
