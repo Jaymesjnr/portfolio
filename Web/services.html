@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>James Jnr — Services</title>
+  <meta name="description" content="Services and rates for web and mobile development, UI/UX, and consulting. Custom quotes available." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --bg:#111111; --text:#e5e5e5; --muted:#8a8a8a; --accent:#1f3d2b; --card:#141414;
+      --grid-line: rgba(26,26,26,0.9);
+    }
+    html,body { height:100%; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background-color: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      margin:0;
+    }
+    /* subtle grid */
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.12;
+      z-index: 0;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .accent { color: var(--accent); }
+    .btn-accent {
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      background: transparent;
+      padding: 0.5rem 0.9rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 180ms ease, color 180ms ease, transform 120ms ease;
+    }
+    .btn-accent:hover { background: var(--accent); color: var(--text); transform: translateY(-2px); }
+    .dot { width:8px; height:8px; border-radius:999px; background:var(--accent); flex-shrink:0; margin-right:10px; }
+
+     /* Fade-in with stagger support */
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    [data-delay="1"] { transition-delay: 80ms; }
+    [data-delay="2"] { transition-delay: 160ms; }
+    [data-delay="3"] { transition-delay: 240ms; }
+  </style>
+</head>
+<body>
+
+  <!-- Header (reuse same nav style as index) -->
+  <header class="fixed top-4 left-0 right-0 z-30">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="flex items-center justify-between bg-[rgba(20,20,20,0.6)] backdrop-blur rounded-xl px-4 py-3 shadow-sm">
+        <div class="flex items-center space-x-3">
+          <img src="/images/dp.JPG" alt="Logo" class="w-10 h-10 rounded-md flex items-center justify-center bg-[rgba(31,61,43,0.12)] text-[var(--accent)] font-semibold" aria-hidden="true">
+          <div class="text-sm font-semibold" style="color:var(--text)">James Jnr</div>
+        </div>
+
+        <nav aria-label="Primary" class="hidden md:flex items-center space-x-6 text-sm">
+          <a href="index.html" class="hover:underline">Home</a>
+          <a href="index.html#resume" class="hover:underline">Resume</a>
+          <a href="index.html#projects" class="hover:underline">Projects</a>
+          <a href="index.html#about" class="hover:underline">About</a>
+          <a href="index.html#contact" class="hover:underline">Contact</a>
+        </nav>
+
+        <div class="md:hidden">
+          <button id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" class="text-[var(--muted)] flex items-center px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-[var(--accent)]" aria-label="Open navigation">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24" aria-hidden="true">
+              <line x1="4" y1="7" x2="20" y2="7" stroke-linecap="round"/>
+              <line x1="4" y1="12" x2="20" y2="12" stroke-linecap="round"/>
+              <line x1="4" y1="17" x2="20" y2="17" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav (simple) -->
+  <div id="mobile-nav" class="fixed inset-x-4 top-20 z-30 bg-[rgba(20,20,20,0.95)] rounded-lg p-4 mx-4 hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="flex flex-col space-y-3 text-sm">
+      <a href="index.html" class="block">Home</a>
+      <a href="resume.html" class="block">Resume</a>
+      <a href="index.html#projects" class="block">Projects</a>
+      <a href="index.html#about" class="block">About</a>
+      <a href="index.html#contact" class="block">Contact</a>
+    </div>
+  </div>
+
+  <main class="relative z-10 pt-32 pb-20">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <!-- Intro -->
+      <section class="mb-12">
+        <div class="flex items-start justify-between">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-extrabold" style="color:var(--text)">Services & Rates</h1>
+            <p class="mt-3 text-[var(--muted)] max-w-2xl">
+              Focused web and mobile development, UI/UX, and consulting. Prices below are guidelines — I provide custom quotes for every project.
+            </p>
+          </div>
+          <div class="text-right">
+            <div class="font-semibold accent">Available for freelance & contract</div>
+            <div class="mt-1 text-[var(--muted)] text-sm">Typical response time: 24–48 hours</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing grid -->
+      <section aria-labelledby="pricing" class="grid gap-6 md:grid-cols-3 mb-8 fade-in">
+        <!-- Card 1 -->
+        <article class="card p-6">
+          <h3 class="text-lg font-semibold" id="site-build">Website Design & Build</h3>
+          <p class="mt-2 text-[var(--muted)] text-sm">Responsive site, up to 5 pages, basic SEO, deployment</p>
+          <div class="mt-4 flex items-baseline justify-between">
+            <div class="text-xl font-bold accent">$450</div>
+            <div class="text-sm text-[var(--muted)]">fixed</div>
+          </div>
+
+          <ul class="mt-4 space-y-3 text-[var(--muted)]">
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>Responsive layout and mobile optimization</li>
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>Basic on‑page SEO and performance checks</li>
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>2 rounds of design revisions</li>
+          </ul>
+
+          <div class="mt-5">
+            <a class="btn-accent" href="#quote" aria-label="Request quote for Website Design & Build">Request Quote</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card p-6">
+          <h3 class="text-lg font-semibold" id="app-proto">Flutter Mobile App Prototype</h3>
+          <p class="mt-2 text-[var(--muted)] text-sm">Clickable prototype, core screens, basic auth</p>
+          <div class="mt-4 flex items-baseline justify-between">
+            <div class="text-xl font-bold accent">$1,200</div>
+            <div class="text-sm text-[var(--muted)]">fixed</div>
+          </div>
+
+          <ul class="mt-4 space-y-3 text-[var(--muted)]">
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>Interactive prototype for user testing</li>
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>Core flows and navigation</li>
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>Basic authentication & sample data</li>
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>2 feedback rounds</li>
+          </ul>
+
+          <div class="mt-5">
+            <a class="btn-accent" href="#quote" aria-label="Request quote for Mobile App Prototype">Request Quote</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card p-6">
+          <h3 class="text-lg font-semibold" id="full-app">Full Mobile App Development</h3>
+          <p class="mt-2 text-[var(--muted)] text-sm">Production app, backend integration, testing</p>
+          <div class="mt-4 flex items-baseline justify-between">
+            <div class="text-xl font-bold accent">From $4,500</div>
+            <div class="text-sm text-[var(--muted)]">estimate</div>
+          </div>
+
+          <ul class="mt-4 space-y-3 text-[var(--muted)]">
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>End‑to‑end development (Flutter)</li>
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>Backend integration (Firebase / Supabase)</li>
+            <li class="flex items-start"><span class="dot" aria-hidden="true"></span>Testing, deployment, and app store submission support</li>
+          </ul>
+
+          <div class="mt-5">
+            <a class="btn-accent" href="#quote" aria-label="Request quote for Full Mobile App">Request Quote</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Additional services -->
+      <section class="grid gap-6 md:grid-cols-3 mb-8 fade-in">
+        <div class="card p-6">
+          <h4 class="font-semibold">UI/UX Design & Branding</h4>
+          <p class="mt-2 text-[var(--muted)] text-sm">Visual system, 3 screens, logo refresh. Figma handoff included.</p>
+          <div class="mt-4 font-bold accent">$300</div>
+        </div>
+
+        <div class="card p-6">
+          <h4 class="font-semibold">Web Maintenance</h4>
+          <p class="mt-2 text-[var(--muted)] text-sm">Monthly updates, backups, security checks.</p>
+          <div class="mt-4 font-bold accent">$120 / month</div>
+        </div>
+
+        <div class="card p-6">
+          <h4 class="font-semibold">Consulting & Hourly Work</h4>
+          <p class="mt-2 text-[var(--muted)] text-sm">Architecture, code review, mentoring. Retainer options available.</p>
+          <div class="mt-4 font-bold accent">$30 / hour</div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="mb-8 fade-in">
+        <h2 class="text-2xl font-semibold section-title">FAQ</h2>
+        <div class="mt-4 grid gap-3">
+          <div class="card p-4">
+            <strong>Do you provide custom quotes?</strong>
+            <p class="mt-2 text-[var(--muted)]">Yes — every project is scoped individually. Send a brief with goals, timeline, and budget for a tailored proposal.</p>
+          </div>
+          <div class="card p-4">
+            <strong>What is the typical timeline?</strong>
+            <p class="mt-2 text-[var(--muted)]">Small websites: 1–3 weeks. App prototypes: 2–4 weeks. Full apps: 6–12 weeks depending on scope.</p>
+          </div>
+          <div class="card p-4">
+            <strong>How do payments work?</strong>
+            <p class="mt-2 text-[var(--muted)]">Standard: 30% deposit, milestone payments, final payment on delivery. Deposits are non‑refundable after work begins.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quote form -->
+      <section id="quote" class="mb-12 fade-in">
+        <h2 class="text-2xl font-semibold section-title">Request a Quote</h2>
+        <div class="mt-6 card p-6">
+          <form action="https://formsubmit.co/juniord3mon@outlook.com" method="POST" class="grid gap-4">
+  <!-- Name -->
+  <label class="block">
+    <span class="text-sm text-[var(--muted)]">Name</span>
+    <input type="text" name="name" required placeholder="Your name"
+      class="mt-2 w-full bg-[#0f0f0f] border border-[rgba(255,255,255,0.04)] rounded-md px-3 py-2 text-[var(--text)]" />
+  </label>
+
+  <!-- Email -->
+  <label class="block">
+    <span class="text-sm text-[var(--muted)]">Email</span>
+    <input type="email" name="email" required placeholder="youremail@example.com"
+      class="mt-2 w-full bg-[#0f0f0f] border border-[rgba(255,255,255,0.04)] rounded-md px-3 py-2 text-[var(--text)]" />
+  </label>
+
+  <!-- Message -->
+  <label class="block">
+    <span class="text-sm text-[var(--muted)]">Project summary</span>
+    <textarea name="message" rows="5" placeholder="Briefly describe goals, timeline, and budget"
+      class="mt-2 w-full bg-[#0f0f0f] border border-[rgba(255,255,255,0.04)] rounded-md px-3 py-2 text-[var(--text)]"></textarea>
+  </label>
+
+  <!-- Hidden fields (optional) -->
+  <input type="hidden" name="_next" value="thanks.html">
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Submit -->
+  <div class="flex items-center gap-4 flex-wrap">
+    <button type="submit" class="bg-[var(--accent)] text-white px-4 py-2 rounded-md font-semibold">Send Request</button>
+    <div class="text-[var(--muted)] text-sm">Or email: <a class="accent" href="mailto:youremail@example.com">youremail@example.com</a></div>
+  </div>
+</form>
+
+        </div>
+      </section>
+
+      <!-- Terms summary -->
+      <section class="mb-12">
+        <div class="text-[var(--muted)] text-sm">
+          <strong>Terms summary:</strong> 30% deposit to start; two rounds of revisions included for fixed‑price projects; final deliverables transferred on full payment. I reserve the right to showcase work in my portfolio.
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12">
+    <div class="max-w-5xl mx-auto px-6 py-8 text-center text-[var(--muted)]" style="border-top:1px solid rgba(255,255,255,0.03)">
+      © <span id="year"></span> James Jnr — Services & Rates
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in on scroll with stagger
+    (function(){
+      const faders = document.querySelectorAll('.fade-in');
+      const options = { threshold: 0.18 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, options);
+      faders.forEach((f, i) => {
+        f.setAttribute('data-delay', Math.min(3, Math.floor(i/1) + 1));
+        observer.observe(f);
+      });
+    })();
+
+    // Mobile nav toggle
+    (function(){
+      const btn = document.getElementById('nav-toggle');
+      const mobile = document.getElementById('mobile-nav');
+      if (!btn || !mobile) return;
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        if (!expanded) {
+          mobile.classList.remove('hidden'); mobile.setAttribute('aria-hidden','false');
+        } else {
+          mobile.classList.add('hidden'); mobile.setAttribute('aria-hidden','true');
+        }
+      });
+      mobile.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        mobile.classList.add('hidden'); mobile.setAttribute('aria-hidden','true'); btn.setAttribute('aria-expanded','false');
+      }));
+    })();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

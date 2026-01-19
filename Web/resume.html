@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>James Jnr — Resume</title>
+
+  <!-- Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN (for prototyping) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --bg: #111111;
+      --text: #e5e5e5;
+      --muted: #8a8a8a;
+      --accent: #1f3d2b; /* deep forest green */
+      --card-bg: #141414;
+      --grid-line: rgba(26,26,26,0.9);
+    }
+
+    html,body { height:100%; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background-color: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      margin:0;
+    }
+
+    /* Subtle grid background */
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.16;
+      z-index: 0;
+    }
+
+    /* Accent usage: links, selection, section titles, bullets, card left border, CTA */
+    a { color: var(--accent); }
+    a:hover, a:focus { text-decoration: underline; outline: none; }
+    ::selection { background: var(--accent); color: var(--text); }
+
+    /* Card base */
+    .card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.7); }
+
+    /* Project left border uses accent (always visible) */
+    .project-card { border-left-width: 4px; border-left-style: solid; border-left-color: var(--accent); }
+
+    /* Section title underline (accent visible) */
+    .section-title {
+      display: inline-block;
+      padding-bottom: 6px;
+      position: relative;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 3px;
+      width: 56px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* Bullet icon */
+    .bullet {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      display: inline-block;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    /* CTA button (outline fills on hover) */
+    .cta {
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      background: transparent;
+      padding: 0.45rem 0.9rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 220ms ease, color 220ms ease, transform 120ms ease;
+    }
+    .cta:hover { background: var(--accent); color: var(--text); transform: translateY(-2px); }
+
+    /* Rare highlight: selected project uses stronger accent shadow */
+    .project-selected {
+      box-shadow: 0 12px 30px rgba(31,61,43,0.12);
+    }
+
+    /* Fade-in utility */
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media (min-width: 1024px) { .container-max { max-width: 1000px; } }
+  </style>
+</head>
+<body class="antialiased">
+
+  <main class="relative z-10">
+    <!-- Header -->
+    <header class="w-full border-b border-transparent">
+      <div class="container-max mx-auto px-6 py-10 text-center">
+        <h1 class="text-3xl md:text-4xl font-semibold tracking-wide" style="color:var(--text);">
+          <span class="block">James Jnr</span>
+        </h1>
+        <p class="mt-2 text-sm md:text-base text-[var(--muted)]">Flutter & Web Developer</p>
+
+        <p class="mt-3 text-sm text-[var(--muted)]">
+          Lagos, Nigeria &nbsp;•&nbsp;
+          <a href="mailto:juniord3mon@outlook.com" class="font-medium">juniord3mon@outlook.com</a> &nbsp;•&nbsp;
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">LinkedIn</a> &nbsp;•&nbsp;
+          <a href="https://github.com/jaymesjnr" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="container-max mx-auto px-6 py-10 space-y-12">
+
+      <!-- Summary -->
+      <section class="fade-in" id="summary">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="section-title text-lg">Summary</h2>
+          <p class="mt-4 text-[var(--text)] leading-relaxed">
+            Developer specializing in Flutter and web technologies with strong backend integration skills (Firebase, Supabase).
+            Experienced in building apps and websites for my own businesses, with additional expertise in UI/UX, graphic design,
+            and media editing. I deliver functional, visually engaging digital solutions that balance creativity with technical precision.
+          </p>
+        </div>
+      </section>
+
+      <!-- Two-column: Skills + Experience -->
+      <section class="fade-in grid grid-cols-1 lg:grid-cols-2 gap-8" id="skills-experience">
+
+        <!-- Skills -->
+        <div class="card p-6">
+          <h2 class="section-title text-base mb-4">Skills</h2>
+          <ul class="space-y-3 text-[var(--text)]">
+            <li class="flex items-start">
+              <span class="bullet mt-1"></span>
+              <div><span class="font-medium">Frontend:</span> Flutter, React, HTML, CSS, JavaScript</div>
+            </li>
+            <li class="flex items-start">
+              <span class="bullet mt-1"></span>
+              <div><span class="font-medium">Backend:</span> Firebase, Supabase, REST APIs</div>
+            </li>
+            <li class="flex items-start">
+              <span class="bullet mt-1"></span>
+              <div><span class="font-medium">Creative:</span> UI/UX Design, Graphic Design, Photo & Video Editing</div>
+            </li>
+            <li class="flex items-start">
+              <span class="bullet mt-1"></span>
+              <div><span class="font-medium">Tools:</span> Git, Docker, Figma, VS Code</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Experience -->
+        <div class="card p-6">
+          <h2 class="section-title text-base mb-4">Experience</h2>
+          <div class="text-[var(--text)] space-y-3">
+            <p class="font-medium">Independent Developer <span class="text-[var(--muted)]">| 2022 – Present</span></p>
+            <ul class="list-disc list-inside text-[var(--muted)] space-y-2">
+              <li>Designed and developed two live business websites, establishing professional online presence and brand identity.</li>
+              <li>Currently building a mobile app for money budgeting, integrating real-time backend services.</li>
+              <li>Applied UI/UX principles and creative design skills to deliver polished, user-friendly products.</li>
+              <li>Experienced in backend setups with Firebase and Supabase, ensuring scalability and security.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="fade-in" id="projects">
+        <div class="max-w-3xl mx-auto space-y-6">
+          <h2 class="section-title text-lg">Projects</h2>
+
+          <!-- Project 1 (live) -->
+          <article class="card p-5 project-card project-item" data-project-id="app">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-base font-semibold" style="color:var(--text);">My Developer Web & App <span class="text-[var(--muted)] text-sm">(Live)</span></h3>
+                <p class="mt-2 text-[var(--muted)] text-sm"><strong>Tech Stack:</strong> Flutter, Firebase & Html, (Tailwind) CSS and Javascript</p>
+                <p class="mt-3 text-[var(--muted)] text-sm">
+                  Developed a mobile app and website to show my developer profile and portfolio. Built with Flutter for cross-platform compatibility and Firebase for authentication, database, and cloud functions. Expected impact: legitimized my developer skills and enhanced professional visibility
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 (live) -->
+          <article class="card p-5 project-card project-item" data-project-id="site1">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-base font-semibold" style="color:var(--text);">Kyvaro Website <span class="text-[var(--muted)] text-sm">(Live)</span></h3>
+                <p class="mt-2 text-[var(--muted)] text-sm"><strong>Tech Stack:</strong> Html, Tailwind CSS, Vercel Hosting</p>
+                <p class="mt-3 text-[var(--muted)] text-sm">
+                  Designed and developed a responsive website to establish online presence for Kyvaro. Integrated Vercel Hosting for reliable deployment. Applied UI/UX principles for intuitive navigation and engaging visuals. Impact: increased brand visibility and customer engagement.
+                </p>
+                <p class="mt-3"><a class="cta inline-block" href="https://kyvaro.com" target="_blank" rel="noopener">View Website</a></p>
+              </div> 
+            </div>
+          </article>
+
+           <!-- Project 3 (live) -->
+          <article class="card p-5 project-card project-item" data-project-id="site2">
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-base font-semibold" style="color:var(--text);">Fundsverse Website <span class="text-[var(--muted)] text-sm">(Live)</span></h3>
+                <p class="mt-2 text-[var(--muted)] text-sm"><strong>Tech Stack:</strong> Flutter, Tailwind CSS, JavaScript</p>
+                <p class="mt-3 text-[var(--muted)] text-sm">
+                  Created a modern, lightweight website optimized for performance. Designed custom layouts with burnt orange colors used consistently for links and highlights, and responsive design. Added subtle animations to enhance user engagement. Impact: delivered a modern digital presence that improved customer trust and accessibility.
+                </p>
+                <p class="mt-3"><a class="cta inline-block" href="https://fundsverse.io" target="_blank" rel="noopener">View Website</a></p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="fade-in" id="education">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="section-title text-lg">Education</h2>
+          <ul class="mt-4 text-[var(--muted)] space-y-2">
+            <li>B.Sc. Computer Science</li>
+            <li>Online courses: Flutter, Web Development, Cloud Computing</li>
+            <li>Computer Professional (GMCPN) — CPN (2024)</li>
+            <li>Responsive Web Design — Mimo (2024)</li>
+            <li>C & C# Programming — Programming Hub (2023)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Additional Strengths -->
+      <section class="fade-in" id="strengths">
+        <div class="max-w-3xl mx-auto">
+          <h2 class="section-title text-lg">Additional Strengths</h2>
+          <ul class="mt-4 text-[var(--muted)] space-y-2">
+            <li>Strong communication and collaboration skills</li>
+            <li>Ability to deliver complete solutions — from backend setup to polished UI/UX</li>
+            <li>Versatile skill set spanning apps, websites, branding, and media</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-12 border-t" style="border-color:var(--accent);">
+      <div class="container-max mx-auto px-6 py-8 text-center text-[var(--muted)]">
+        © <span id="year"></span> James Jnr — Flutter & Web Developer
+      </div>
+    </footer>
+  </main>
+
+  <!-- JS: IntersectionObserver + project select (rare highlight) + year -->
+  <script>
+    // Fade-in on scroll
+    (function(){
+      const faders = document.querySelectorAll('.fade-in');
+      const options = { threshold: 0.18 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, options);
+      faders.forEach(f => observer.observe(f));
+    })();
+
+    // Project select toggle (rare highlight)
+    (function(){
+      const items = document.querySelectorAll('.project-item');
+      items.forEach(item => {
+        item.addEventListener('click', (e) => {
+          // ignore clicks on external links
+          if (e.target.closest('a')) return;
+          const already = item.classList.contains('project-selected');
+          document.querySelectorAll('.project-item.project-selected').forEach(el => el.classList.remove('project-selected'));
+          if (!already) item.classList.add('project-selected');
+        });
+      });
+    })();
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
