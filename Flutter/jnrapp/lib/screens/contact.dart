@@ -50,7 +50,7 @@ class _ContactScreenState extends State<ContactScreen> {
     final subject = Uri.encodeComponent('Portfolio contact from $name');
     final body = Uri.encodeComponent('Name: $name\nEmail: $email\n\n$message');
 
-    final mailto = 'mailto:juniord3mon@outlook.com?subject=$subject&body=$body';
+    final mailto = 'mailto:jamesojnr@outlook.com?subject=$subject&body=$body';
 
     try {
       final uri = Uri.parse(mailto);
@@ -175,13 +175,13 @@ class _ContactScreenState extends State<ContactScreen> {
                 runSpacing: 10,
                 children: [
                   ElevatedButton.icon(
-                    onPressed: () => _openUrl('mailto:juniord3mon@outlook.com'),
+                    onPressed: () => _openUrl('mailto:jamesojnr@outlook.com'),
                     icon: const Icon(Icons.mail),
                     label: const Text('Email'),
                     style: ElevatedButton.styleFrom(backgroundColor: Colors.green[800]),
                   ),
                   OutlinedButton.icon(
-                    onPressed: () => _openUrl('https://github.com/jaymesjnr'),
+                    onPressed: () => _openUrl('https://github.com/jam3sjnr'),
                     icon: const Icon(Icons.code),
                     label: const Text('GitHub'),
                     style: OutlinedButton.styleFrom(side: const BorderSide(color: Colors.white12)),

@@ -1,16 +1,55 @@
-# jnrapp
+# Developer Portfolio App by James Jnr
 
-A new Flutter project.
+A Flutter application showcasing my **developer profile, resume, and project portfolio** in a clean, minimal, and on‑brand design.  
+The app provides a central place to explore my skills, experience, and projects — optimized for mobile.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- **Splash Screen** — branded introduction with smooth transition.
+- **Auth Flow** — simple login/register.
+- **Home Page** — bottom navigation with quick access to all sections.
+- **Resume Screen** — scrollable resume with summary, skills, experience, education, and strengths.
+- **Project Showcase** — swipeable cards highlighting live websites and apps.
+- **About Screen** — personal bio and philosophy.
+- **Contact Screen** — email and GitHub links for easy communication.
+- **Consistent Theme** — dark background, bone text, muted gray secondary, forest green accent, Inter font.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+- [Flutter](https://flutter.dev/) — cross‑platform UI toolkit
+- [Dart](https://dart.dev/) — programming language
+- Firebase — backend services (auth, hosting, database)
+
+---
+
+## 📱 Screenshots & Recordings
+
+- View screenshots at /assets/screenshots/jnrapp
+- Recordings at /assets/recordings/jnrapp
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Flutter SDK installed ([installation guide](https://docs.flutter.dev/get-started/install))
+- Android Studio or VS Code with Flutter/Dart plugins
+- Emulator or physical device
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/jam3sjnr/portfolio/Flutter/jnrapp.git
+
+# Navigate into the project directory
+cd jnrapp
+
+# Get dependencies
+flutter pub get
+
+# Run the app
+flutter run

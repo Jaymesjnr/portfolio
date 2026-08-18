@@ -8,10 +8,10 @@ class ResumeScreen extends StatelessWidget {
 
   // Replace these with your real content
   static const _name = 'James Jnr';
-  static const _role = 'Flutter & Web developer • UI Enthusiast';
+  static const _role = 'Founder & Product Enginner';
   static const _summary =
-      'I design and build polished cross‑platform mobile apps and websites. I focus on performance, '
-      'accessible UI, and shipping delightful user experiences that make products shine.';
+      'Product Engineer and founder with hands-on experience designing, building, and iterating software products from concept to production. Passionate about clean code,'
+      'accessible UI, and shipping delightful user experiences.';
 
   final List<Map<String, String>> _experience = const [
     {
@@ -32,7 +32,6 @@ class ResumeScreen extends StatelessWidget {
     {
       'degree': 'B.Sc. Computer Science',
       'school': 'Wellspring University',
-      'period': '2020 — 2024'
     },
     {
       'degree': 'Computer Professional (GMCPN)',
@@ -42,7 +41,7 @@ class ResumeScreen extends StatelessWidget {
     {
       'degree': 'Responsive Web Design',
       'school': 'Mimo',
-      'period': '2020 — 2024'
+      'period': '2024'
     },
     {
       'degree': 'C & C# Programming',
@@ -202,7 +201,7 @@ Widget build(BuildContext context) {
           Text(summary, style: theme.textTheme.bodyMedium),
           const SizedBox(height: 20),
           ElevatedButton.icon(
-            onPressed: () => Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => const ContactScreen()),),
+            onPressed: () => Navigator.push(context,MaterialPageRoute(builder: (context) => const ContactScreen()),),
             icon: const Icon(Icons.send_outlined),
             label: const Text('Contact'),
             style: ElevatedButton.styleFrom(

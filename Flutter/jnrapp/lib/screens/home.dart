@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Project> projects = [
     Project(
       title: 'Kyvaro Website',
-      shortDescription: 'Responsive marketing site built with React and Tailwind.',
+      shortDescription: 'Responsive marketing site built with HTML and Tailwind.',
       images: [
         'lib/assets/kyvaro-ss.PNG',
       ],
@@ -39,14 +39,14 @@ class _HomeScreenState extends State<HomeScreen> {
       repoUrl: 'https://fundsverse.io',
     ),
      Project(
-      title: 'Portfolio Web & App',
-      shortDescription: 'Developed a mobile app and website to show my developer profile and portfolio. Built with Flutter for cross-platform compatibility and Firebase for authentication, database, and cloud functions.',
+      title: 'Personal Web & App',
+      shortDescription: 'Developed a personal mobile app and website. Built with Flutter for cross-platform compatibility, and HTML/Tailwind for the web version. The app showcases my skills, projects, and contact information in a clean and responsive design.',
       images: [
         'lib/assets/profile-ss.PNG',
       ],
-      tech: 'Flutter · Firebase ·HTML · Tailwind · Vercel',
-      liveUrl: 'https://jaymesjnr.vercel.app',
-      repoUrl: 'https://github.com/jaymesjnr/portfolio',
+      tech: 'Flutter · Firebase ·HTML · Tailwind',
+      liveUrl: 'https://github.com/jam3sjnr/portfolio/tree/main/Web',
+      repoUrl: 'https://github.com/jam3sjnr/portfolio/tree/main/Web',
     ),
   ];
 

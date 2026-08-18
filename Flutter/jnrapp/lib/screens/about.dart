@@ -63,12 +63,12 @@ class AboutScreen extends StatelessWidget {
                           children: [
                             Text('James Jnr', style: GoogleFonts.inter(fontSize: 20, fontWeight: FontWeight.w800)),
                             const SizedBox(height: 6),
-                            Text('Flutter & Web developer · UI/UX enthusiast', style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70)),
+                            Text('Product Engineer & Founder', style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70)),
                             const SizedBox(height: 8),
                             Wrap(spacing: 8, runSpacing: 8, children: [
                               _chip('Flutter'),
-                              _chip('React'),
-                              _chip('Tailwind'),
+                              _chip('Dart'),
+                              _chip('Product Engineering'),
                             ]),
                           ],
                         ),
@@ -82,7 +82,7 @@ class AboutScreen extends StatelessWidget {
                   _sectionTitle('About me'),
                   const SizedBox(height: 8),
                   Text(
-                    'I build practical, maintainable apps and websites that balance clean UX with reliable engineering. I enjoy solving product problems, shipping features quickly, and iterating based on real user feedback. Outside of code I work on small businesses and creative projects — design, philosophy, and creating solutions',
+                    'I am a product engineer and founder interested in one thing above all: turning problems into products that actually make life easier. I care about product engineering, software architecture, mobile development, backend systems, security, and the process of taking an idea from concept to production.',
                     style: theme.textTheme.bodyMedium?.copyWith(color: Colors.white70),
                   ),
 
@@ -94,9 +94,9 @@ class AboutScreen extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      _timelineRow('2022–Present', 'Independent Developer · Web & Mobile Development'),
+                      _timelineRow('2022–Present', 'Freelance Developer · Web & Mobile Development'),
                       const SizedBox(height: 8),
-                      _timelineRow('2024–Present', 'Mobile Engineer & UI/UX Designer · Kyvaro.'),
+                      _timelineRow('2024–Present', 'Founder · Kyvaro.'),
                     ],
                   ),
 
@@ -113,7 +113,7 @@ class AboutScreen extends StatelessWidget {
                       _skillPill('JavaScript · React'),
                       _skillPill('HTML · CSS · Tailwind'),
                       _skillPill('Figma · UI/UX Prototyping'),
-                      _skillPill('Accessibility'),
+                      _skillPill('Systems Design · Architecture'),
                       _skillPill('Performance'),
                     ],
                   ),
@@ -126,14 +126,14 @@ class AboutScreen extends StatelessWidget {
                   Row(
                     children: [
                       ElevatedButton.icon(
-                        onPressed: () => _openUrl('mailto:juniord3mon@outlook.com'),
+                        onPressed: () => _openUrl('mailto:jamesojnr@outlook.com'),
                         icon: const Icon(Icons.mail),
                         label: const Text('Email'),
                         style: ElevatedButton.styleFrom(backgroundColor: Colors.green[800]),
                       ),
                       const SizedBox(width: 12),
                       OutlinedButton.icon(
-                        onPressed: () => _openUrl('https://github.com/jaymesjnr'),
+                        onPressed: () => _openUrl('https://github.com/jam3sjnr'),
                         icon: const Icon(Icons.code),
                         label: const Text('GitHub'),
                         style: OutlinedButton.styleFrom(side: const BorderSide(color: Colors.white12)),
